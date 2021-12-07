@@ -4,7 +4,6 @@ eval "$(ssh-agent -s)"
 ssh-add -l
 ssh-add ~/.ssh/id_rsa_kavi_home
 
-
 NC='\033[0m' # No Color
 BLUE='\033[1;34m'
 LI_GREEN='\033[1;32m'
