@@ -2,7 +2,8 @@
 printf "This pushes files to my personal github, then switches the ssh back to my work account."
 eval "$(ssh-agent -s)"
 ssh-add -l
-
+ssh-add ~/.ssh/id_rsa_kavi_home
+ssh-add -l
 
 NC='\033[0m' # No Color
 BLUE='\033[1;34m'
@@ -18,8 +19,7 @@ else
     git add .
     currentDate=$(date +'%I:%M %m/%d/%Y')
     git commit -m "GC Push $currentDate"
-    ssh-add ~/.ssh/id_rsa_kavi_home
-    ssh-add -l
+
     git push origin main
 fi
 ssh-add -D
