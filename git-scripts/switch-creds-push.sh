@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
-printf "This pushes Obsidian files to my personal github, then switches the ssh back to my work account."
+printf "This pushes files to my personal github, then switches the ssh back to my work account."
 eval "$(ssh-agent -s)"
 ssh-add -l
 ssh-add ~/.ssh/id_rsa_kavi_home
-cd ../
 
 
 NC='\033[0m' # No Color
