@@ -16,6 +16,7 @@ then
 else
 
     printf "\n${LI_GREEN}Changes found!${NC} Adding, committing, pushing, then switching credentials back...\n"
+    cd ../
     git add .
     currentDate=$(date +'%I:%M %m/%d/%Y')
     git commit -m "GC Push $currentDate"
